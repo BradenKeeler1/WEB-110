@@ -34,3 +34,13 @@ p{
 .specialItems{
     background-color: #ffffff;
 }
+
+main {
+    font-weight: bold;
+    background-image: url(background.webp);
+    background-repeat: repeat-x;
+}
+
+nav {
+    height:35px;
+}
