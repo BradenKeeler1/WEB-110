@@ -1,0 +1,135 @@
+<!--Allison Hanna 3/20/24-->
+<!-- Ch. 7 Floats-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hobbies</title>
+    <meta charset="utf-8" />
+
+    <style>
+
+      * {
+        box-sizing: border-box;
+      }
+      
+.desc {
+  text-align: center;
+   text-decoration: underline;
+   font-size: 1rem;
+}
+      h2 {
+        padding-left: 10px;
+        color: slategrey;
+        font-size: 2em;
+      }
+ 
+    section {
+      float: left;
+      width:50%;
+      padding:10px;
+    }
+
+      main:after {
+        content: "";
+        display: table;
+        clear: both;
+
+      }
+      img {
+        height: 70%;
+        max-width: 80%;
+        opacity: .7;
+        border: 3px solid #0194b5;
+        border-radius: 20px;
+      }
+
+      img:hover {
+        border: 1px solid #c6d02f;
+        opacity: 1;
+        transform: scale (1.2);
+        transition: transform 0.5s ease-in-out;
+      }
+
+      footer {
+        background-color: #0194b5;
+        text-align: center; 
+        clear: both; 
+      }
+
+      .heading {
+
+      }
+
+      nav {
+        border: 2px solid slategrey;
+        background-color: #ececd8;
+        font-weight: bold;
+        text-align: center;
+        font-size: 120%;
+              }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px;
+        font-size: 1.2em;
+        background-color: #a1e4f3
+      }
+      nav li {
+        display: inline;
+        padding: 10px;
+      }
+      nav a {
+        text-decoration: none;
+      }
+      nav a:link {
+        color: #0194b5;
+      }
+      nav a:visited {
+        color: #2d0540;
+      }
+      nav a:hover {
+        color: #c6d02f;
+      }
+      .wrapper {
+        width: 90%;
+        margin: auto;
+        background-color: #cde5f6;
+        box-shadow: 3px 5px #1b1b2b;
+        border: 2px solid slategray;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+       <h1>Things I like</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Skating</a></li>|
+          <li><a href="soccer.html">Playing soccer</a></li>
+          
+        </ul>
+      </nav>
+
+      <main>
+        <h2>Two Things I like to do</h2>
+
+        <section>
+          <img src="skating.jpg"> <!--Put your first image here-->
+          <p class="desc">I started skating when I was 9 and never have stopped</p>
+        </section>
+
+        <section>
+          <img src="soccer.jpg"> <!--Put your first image here-->
+          <p class="desc">Ive been playing soccer since I was 2 and played a lot of competitive soccer</p>
+        </section>
+      </main>
+      <footer>
+        <h5>Copyright &copy; 2024 Allison Hanna</h5>
+      </footer>
+    </div>
+  </body>
+</html>
