@@ -1,0 +1,104 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #000;
+    max-width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+
+}
+
+header img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 25px;
+    color: rgb(107, 198, 198);
+    
+}
+
+.form-group {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: antiquewhite;
+}
+
+input[type="text"],input[type="email"],input[type="tel"],textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+button[type="submit"] {
+    background-color: antiquewhite;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 16px
+}
+
+button[type="submit"]:hover {
+    background-color: #04AA6D;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    color: rgb(107, 198, 198);
+    border: 2px solid black;
+}
+
+/* Valid fields after user interaction */
+input:user-valid,
+select:user-valid {
+  border-color: #04AA6D;
+  background-color: #e8f5e9;
+}
+input[type=text]:focus,
+input[type=date]:focus,
+select:focus {
+  background-color: lightyellow;
+}
