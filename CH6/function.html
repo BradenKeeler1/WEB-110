@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Average Assignment</title>
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript Gas Average Project</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Questions & Answers</h2>
+
+            <h3>1. What is the purpose of a function?</h3>
+            <p>
+                A function is used to organize reusable blocks of code that perform a single task or related set of tasks. 
+                It helps make programs easier to read, reduces repetition, and allows logic to be reused whenever needed.
+            </p>
+        </section>
+
+        <section>
+            <h2>JavaScript Gas Exercises</h2>
+            <p>The following script prompts the user for their name, weekly gas totals, calculates the average, and displays results using confirm().</p>
+        </section>
+    </main>
+    <script>
+        let username = prompt("Please enter your name:");
+
+        let entryCount = 0;
+        let total = 0;
+        let weeklyGas = parseFloat(prompt(
+            "Enter your FIRST weekly gas total, or enter -1 to end:"
+        ));
+
+        function calcGasAvg() {
+        while (weeklyGas !== -1) {
+         total += weeklyGas;
+         entryCount++;
+         weeklyGas = parseFloat(prompt(
+                    "Enter NEXT weekly gas total, or enter -1 to end:"
+                ));
+            }
+
+            let averageGas = 0;
+            if (entryCount > 0) {
+                averageGas = total / entryCount;
+            }
+
+            return averageGas;
+        }
+        let gas = calcGasAvg();
+
+        confirm(username + "'s average weekly gas bill is " + gas.toFixed(2));
+
+         if (entryCount === 0) {
+            confirm("No gas totals were entered.");
+        } else if (entryCount === 1) {
+            confirm("You entered 1 gas total.");
+        } else {
+            confirm(`You entered ${entryCount} gas totals.`);
+        }
+    </script>
+    </body>
+    </html>
