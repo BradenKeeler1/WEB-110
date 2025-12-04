@@ -1,0 +1,51 @@
+<!-- Braden Keeler 12/3/2025-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mood Switcher</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        .mood-btn {
+            padding: 12px 20px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 6px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mood Switcher</h1>
+
+    <button class="mood-btn" data-mood="happy">Happy</button>
+    <button class="mood-btn" data-mood="calm">Calm</button>
+    <button class="mood-btn" data-mood="excited">Excited</button>
+    <button class="mood-btn" data-mood="chill">Chill</button>
+    <button class="mood-btn" data-mood="mysterious">Mysterious</button>
+
+    <p id="moodDisplay">Click a mood to begin!</p>
+
+    <script src="mood.js"></script>
+
+    <section>
+    <h2>Questions & Answers</h2>
+
+    <h3>Why is the JavaScript <code>textContent</code> property safer than <code>innerHTML</code>?</h3>
+    <p><code>textContent</code> is safer because it treats everything as plain text, preventing accidental or malicious HTML or JavaScript from being executed. <code>innerHTML</code> interprets input as HTML, which can lead to security risks like cross-site scripting (XSS).</p>
+
+    <h3>If you use an HTML text box with an attribute like <code>id="text"</code> and a corresponding DOM property such as <code>const box = document.querySelector("#text")</code>, how do they relate?</h3>
+    <p>The HTML <code>id</code> uniquely identifies the element in the document. <code>document.querySelector("#text")</code> retrieves that exact element and stores it in a JavaScript variable so the script can read or modify it.</p>
+
+    <h3>What would happen to the text box with id="text" if this line were added?</h3>
+    <p><code>text.textContent = "Hello!"</code> would replace any text inside the element with the word “Hello!”. If the element is an input box, it would not change the typed value because input boxes use the <code>value</code> property instead of <code>textContent</code>.</p>
+</section>
+</body>
+</html>
