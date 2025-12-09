@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> My business card</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+     <style>
+           * {  /*  These are universal styles */
+                box-sizing: border-box;
+            }
+
+            body {
+                height: 100vh; /*  This will fill the browser's height.  Remove the justify-content and align-items css to see the full height. */
+                display: flex;                 
+                justify-items: center;  
+                align-items: center;              
+                perspective: 1000;                   
+                background-color: #ffffff;
+                }
+            
+         /* This is the container holding the picture */
+            .container {
+                min-width: 700px; 
+                min-height: 350px;  
+                position: relative; 
+                transition: 1.5s ease-in-out;                   
+                transform-style: preserve-3d;
+            }
+    
+               /* This is the container holding the layer of text */
+            .side {
+                position: absolute;  
+                text-align: center; 
+                width: 100%;           
+                height: 100%;             
+                padding: 20px 50px;       
+                color: #000000;               
+                transform-style: preserve-3d;                            
+                backface-visibility: hidden;    
+                border-radius: 20px;                              
+            }
+             
+         /*These are the words on the card -front and back */
+            .content {
+                transform: translatez(70px) scale(0.8);                     
+                line-height: 2em;                   
+                font-family: "Roboto", sans-serif;
+                padding:4px;
+                border-style: solid;                           
+                border-width: 10px;                          
+                border-image: linear-gradient(45deg, white, black) 1;                       
+                }
+         
+
+            .content h1 {
+                position: relative;     /* Positions the header on the card*/
+                        }
+         
+           .content h1:after {  /* Positions an imaginary div for the border*/
+                content: "";            
+                position: absolute;    
+                bottom: -20px;       
+                height: 3px;         
+                background-color: #3e3;
+                width: 70px;    
+                left: 50%;      
+                transform: translateX(-50%);    
+            }
+         
+
+            .content p {
+                margin-top: 50px;/* Spacing from the header*/
+                line-height: 2.5em; /* Line spacing*/
+               
+            }
+  
+            .front {
+                background-size: 100vh; /* Shows more of the image so you fill the space*/
+                background-image: url(download.jpeg); /* Put the background picture here for the front */
+            }
+            .back {
+                
+                                             /* This is the background color for the back of the card */
+                transform: rotateY(180deg);  /* This keeps the image on the back of the card.  Remove it to see the difference.*/
+                padding-top: 10px;
+                background-image: url(download.jpeg);   /* Put the background picture here for the back */
+    
+            }
+      
+            .back h2 {
+                margin-top: 10px;/* Moves the header to the top of the card*/
+                font-size:2rem;
+            }
+         
+            .backtext{     /* This formats the text on the back of the card*/
+                 font-size:2rem;
+                 padding:0px;
+               }
+         
+         /* Link styles */
+         
+         a:link{     
+             color:lightblue;
+             font-family:"Roboto" sans-serif;
+             font-size:1.5rem;
+             
+         }
+         a:visited{
+             color: grey;
+         }
+         a:hover{
+            color: white;
+            background-color: black;
+         }
+         
+          /* Flip the card    */
+        .container:hover {
+            transform: rotateY(180deg);
+        }
+      </style>
+
+ </head>
+        <body>
+<nav>
+<ul>
+    <li><a href="aboutme.html">About me</a> </li> <!-- HOME PAGE -->
+    <li class="image1"><a href="soccer.html">About soccer</a> </li> <!-- SOCCER PASSION -->
+    <li class="image2"><a href="skating.html">About skating</a></li> <!-- SKATING PASSION -->
+    <li class="image2"><a href="gaming.html">About gaming</a></li> <!-- GAMING PASSION -->
+    <li class="image2"><a href="music.html">Music taste</a></li> <!-- MUSIC PASSION -->
+    <li class="image2"><a href="card.html">Business card</a></li> <!-- BUSINESS CARD -->
+ </ul>       
+</nav>
+
+            <div class="container"><!--This is the container that holds the business card -->
+                <div class="front side"><!--This is the container that holds the front of the business card -->
+                    <div class="content"><!--This is the container that holds the info on the front of the business card -->
+                        <h1> Braden Keeler <br> Need a web developer?</h1> <!--This is the header on the front of the business card -->
+                        <p> I am a inspiring web developer thats currently in school for web development. I recently have gained lots of experience regarding websites through shadowing other web developers.
+                        </p>
+                    </div> <!--closing content div-->
+                </div><!--closing front side-->
+                <div class="back side"><!--This is the container that holds the back of the business card -->
+                    <div class="content"><!--This is the container that holds the info on the back of the business card -->
+                        <h2>Contact Me</h2> <!--This is the header on the back of the business card. Make this an H1 if you want the underline under the words -->
+                      
+                        <h3 class="backtext"> Braden Keeler <br> 913.272.8230</h3>
+                        <a href="mailto:studentemail@jccc.edu">Email me </a><br>
+                        <a href="resume.html">My resume</a>
+                        <br> 
+                        <br>
+                   
+                      </div> <!--closing content div-->
+                </div><!--closing back side-->
+
+            </div><!--closing container-->
+    
+        </body>
+</html>
